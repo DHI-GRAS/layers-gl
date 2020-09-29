@@ -15,7 +15,7 @@
     "tag": "latest"
   },
   "scripts": {
-    "prepublishOnly": "npm run build",
+    // "prepublishOnly": "npm run build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "test": "if test \"$CI\" = 'true' || test \"$TRAVIS\" = 'true'; then \n  eslint src && jest \nelse jest --watch \nfi",
