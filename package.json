@@ -1,5 +1,5 @@
 {
-  "name": "@Robert-OP/layers-gl",
+  "name": "@robert-op/layers-gl",
   "version": "1.0.4",
   "description": "A MapboxGL plugin for animated flomap data visualization (based on  @astrosat/windgl)",
   "main": "dist/windgl.cjs.js",
@@ -10,7 +10,7 @@
     "README.md"
   ],
   "publishConfig": {
-    "name": "@Robert-OP/layers-gl",
+    "name": "@robert-op/layers-gl",
     "access": "public",
     "tag": "latest"
   },
