@@ -1,4 +1,4 @@
-# WindGL
+# LayersGL
 
 A WebGL-powered visualization of wind power using custom Mapbox Layers.
 Capable of rendering up to 1 million wind particles at 60fps.
@@ -6,7 +6,7 @@ Capable of rendering up to 1 million wind particles at 60fps.
 ## Usage
 
 ```sh
-npm install --save @astrosat/windgl
+npm install --save @Robert-OP/layers-gl
 ```
 
 ```javascript
