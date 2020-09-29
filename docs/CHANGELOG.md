@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Robert-OP/layers-gl/compare/v1.0.2...v1.0.3) (2020-09-29)
+
+
+### Bug Fixes
+
+* **github-actions:** change workflow from running in parallel to run sequentially through steps ([5f87995](https://github.com/Robert-OP/layers-gl/commit/5f879952735950a75083e1bf68f683805d198228))
+
 ## [1.0.2](https://github.com/Robert-OP/layers-gl/compare/v1.0.1...v1.0.2) (2020-09-29)
 
 
