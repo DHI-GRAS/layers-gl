@@ -53,7 +53,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/robert-op/
+          registry-url: https://npm.pkg.github.com/dhi-gras/
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}

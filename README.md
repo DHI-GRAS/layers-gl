@@ -6,12 +6,12 @@ Capable of rendering up to 1 million wind particles at 60fps.
 ## Usage
 
 ```sh
-npm install --save @Robert-OP/layers-gl
+npm install --save @dhi-gras/layers-gl
 ```
 
 ```javascript
 import {Map} from 'mapboxgl';
-import {sampleFill, particles, source, arrows} from '@astrosat/windgl';
+import {sampleFill, particles, source, arrows} from '@dhi-gras/windgl';
 
 // 1. Create a source
 const windSource = source('http://url/to/backend');
