@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Robert-OP/layers-gl/compare/v1.0.0...v1.0.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* **npm-ci:** add npm install, build and commit changes to github workflow ([53dff51](https://github.com/Robert-OP/layers-gl/commit/53dff5132dd17540d0dc8e6ae26795f51d46563f))
+
 # 1.0.0 (2020-09-29)
 
 
