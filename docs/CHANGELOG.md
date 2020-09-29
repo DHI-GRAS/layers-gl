@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/Robert-OP/layers-gl/compare/v1.0.5...v1.0.6) (2020-09-29)
+
+
+### Bug Fixes
+
+* **github-actions:** change name and repo to lower case since capital letters are not supported anymore ([56215f6](https://github.com/Robert-OP/layers-gl/commit/56215f60a9eb8f547b2de8bb561b71a28134fdc5))
+* **merge-issues:** fix merge issues regarding naming in package.json ([dc4376e](https://github.com/Robert-OP/layers-gl/commit/dc4376e2ab3edd6bb2a223acd7c869d3fbc0d898))
+
 ## [1.0.5](https://github.com/Robert-OP/layers-gl/compare/v1.0.4...v1.0.5) (2020-09-29)
 
 
