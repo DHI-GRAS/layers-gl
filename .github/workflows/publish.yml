@@ -9,7 +9,7 @@ on:
     types: [created]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-steps:
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
@@ -29,6 +29,7 @@ steps:
   #       - run: npm test
 
   publish-npm:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -43,6 +44,7 @@ steps:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
