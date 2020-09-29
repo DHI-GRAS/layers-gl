@@ -6,15 +6,22 @@
   "module": "dist/windgl.esm.js",
   "browser": "dist/windgl.umd.js",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
+  "publishConfig": {
+    "name": "@Robert-OP/layers-gl",
+    "access": "public",
+    "tag": "latest"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "test": "if test \"$CI\" = 'true' || test \"$TRAVIS\" = 'true'; then \n  eslint src && jest \nelse jest --watch \nfi",
     "serve": "st -nc -i index.html",
-    "start": "run-p  serve watch"
+    "start": "run-p  serve watch",
+    "semantic-release": "npx semantic-release"
   },
   "keywords": [
     "mapboxgl",
@@ -31,6 +38,12 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.1.1",
+    "@semantic-release/npm": "^7.0.6",
+    "@semantic-release/release-notes-generator": "^9.0.1",
     "babel-jest": "^24.3.1",
     "babel-plugin-glslify": "^2.0.0",
     "eslint": "^5.15.0",
@@ -56,6 +69,7 @@
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-pluginutils": "^2.5.0",
     "rollup-watch": "^3.2.2",
+    "semantic-release": "^17.1.2",
     "st": "^1.2.0"
   },
   "eslintConfig": {

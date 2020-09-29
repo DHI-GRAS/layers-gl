@@ -17,8 +17,8 @@ function makeGLSL(userOptions = {}) {
         "**/*.vert",
         "**/*.frag",
         "**/*.glsl",
-        "**/*.glslx"
-      ]
+        "**/*.glslx",
+      ],
     },
     userOptions
   );
@@ -41,7 +41,7 @@ function makeGLSL(userOptions = {}) {
         format: "json",
         keepSymbols: false,
         prettyPrint: false,
-        renaming: "internal-only"
+        renaming: "internal-only",
       });
 
       if (compiled.log) {
@@ -53,7 +53,7 @@ function makeGLSL(userOptions = {}) {
       const {
         fragmentShaders,
         vertexShaders,
-        otherShaders
+        otherShaders,
       } = program.shaders.reduce(
         (obj, shader) => {
           if (shader.name.endsWith("Fragment")) {
@@ -71,7 +71,7 @@ function makeGLSL(userOptions = {}) {
       );
 
       const assembledShaders = [];
-      Object.keys(vertexShaders).forEach(key => {
+      Object.keys(vertexShaders).forEach((key) => {
         if (fragmentShaders[key]) {
           assembledShaders.push(
             `export const ${key} = gl => createProgram(gl, ${JSON.stringify(
@@ -87,7 +87,7 @@ function makeGLSL(userOptions = {}) {
         }
       });
 
-      Object.keys(fragmentShaders).forEach(key => {
+      Object.keys(fragmentShaders).forEach((key) => {
         assembledShaders.push(
           `export const ${key}Fragment = ${JSON.stringify(
             fragmentShaders[key]
@@ -95,7 +95,7 @@ function makeGLSL(userOptions = {}) {
         );
       });
 
-      Object.keys(otherShaders).forEach(key => {
+      Object.keys(otherShaders).forEach((key) => {
         if (key === "main") {
           assembledShaders.push(
             `export default ${JSON.stringify(otherShaders[key])};`
@@ -111,9 +111,9 @@ function makeGLSL(userOptions = {}) {
         code: `import {createProgram} from "../util";
 
         ${assembledShaders.join("\n\n")}`,
-        map: { mappings: "" }
+        map: { mappings: "" },
       };
-    }
+    },
   };
 }
 
@@ -122,36 +122,36 @@ const plugins = [
   resolve(),
   commonjs({
     namedExports: {
-      "node_modules/mapbox-gl/dist/style-spec/index.js": ["expression"]
-    }
+      "node_modules/mapbox-gl/dist/style-spec/index.js": ["expression"],
+    },
   }),
-  buble()
+  buble(),
 ];
 
 export default [
   {
     input: "demo.js",
     output: [{ file: "docs/index.js", format: "iife" }],
-    plugins
+    plugins,
   },
   {
     input: "src/index.js",
     output: [{ file: pkg.browser, format: "umd", name: "windGL" }],
-    plugins
+    plugins,
   },
   {
     input: "src/index.js",
     output: [
       {
         file: pkg.main,
-        format: "cjs"
+        format: "cjs",
       },
       {
         file: pkg.module,
-        format: "es"
-      }
+        format: "es",
+      },
     ],
     external: ["mapbox-gl/dist/style-spec"],
-    plugins
-  }
+    plugins,
+  },
 ];
