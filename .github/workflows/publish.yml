@@ -10,7 +10,24 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: refs/heads/master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install --frozen-lockfile
+      - run: npm build
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4.4.1
+        with:
+          commit_message: Commit latest build
+          branch: master
+  #       - run: npm test
+
   publish-npm:
     runs-on: ubuntu-latest
     steps:
@@ -24,6 +41,7 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
   publish-gpr:
     runs-on: ubuntu-latest
     steps:
