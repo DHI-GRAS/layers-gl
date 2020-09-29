@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/Robert-OP/layers-gl/compare/v1.0.4...v1.0.5) (2020-09-29)
+
+
+### Bug Fixes
+
+* **github-actions:** remove /dist from .gitignore to be able to publish build in /dist from the ci workflow ([d5d84a1](https://github.com/Robert-OP/layers-gl/commit/d5d84a15d2858e925622a4f6de44bf23f69d3b2c))
+* **github-actions:** remove prepublishOnly from package.json which gave an error ([8a7d335](https://github.com/Robert-OP/layers-gl/commit/8a7d335a17b04774eb0bb8cb825228ade5652e35))
+
 ## [1.0.4](https://github.com/Robert-OP/layers-gl/compare/v1.0.3...v1.0.4) (2020-09-29)
 
 
