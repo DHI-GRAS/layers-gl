@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Robert-OP/layers-gl/compare/v1.0.3...v1.0.4) (2020-09-29)
+
+
+### Bug Fixes
+
+* **github-actions:** add needs:build to workflow for publish ([975d308](https://github.com/Robert-OP/layers-gl/commit/975d308466d9a2e9d043fdad0c22f675f44329f3))
+
 ## [1.0.3](https://github.com/Robert-OP/layers-gl/compare/v1.0.2...v1.0.3) (2020-09-29)
 
 
