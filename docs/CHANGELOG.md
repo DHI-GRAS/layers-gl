@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/dhi-gras/layers-gl/compare/v1.1.0...v1.1.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* **dist-folder:** add dist folder in order to test if the library is published with compiled code ([d947227](https://github.com/dhi-gras/layers-gl/commit/d9472270b39db5f4445d55556151d7d07688c05c))
+* **dist-folder:** remove travis.yml since we are not using it to build the library ([9fc2885](https://github.com/dhi-gras/layers-gl/commit/9fc2885a4051a3fbcdc2815e2cc6d73ee908432d))
+
 # [1.1.0](https://github.com/dhi-gras/layers-gl/compare/v1.0.6...v1.1.0) (2020-09-29)
 
 
